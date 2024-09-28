@@ -1,0 +1,8 @@
+.check-in-view{
+    display: flex;
+    align-items: start;
+    padding: 0 24px;
+    gap:40px;
+    justify-content: start;
+    flex-direction: column;
+}

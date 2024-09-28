@@ -1,0 +1,10 @@
+.calender-view{
+    display: flex;
+    align-items: start;
+    padding: 0 24px;
+    gap:20px;
+    justify-content: start;
+    flex-direction: column;
+}
+
+

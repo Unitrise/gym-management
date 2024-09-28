@@ -1,0 +1,26 @@
+.member-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 400px; /* Set a fixed height for the scrollable content */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 8px; /* Add some padding to the right for scrollbar space */
+  }
+  
+  .member-details-container::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+  }
+  
+  .member-details-container::-webkit-scrollbar-track {
+    background: #1f1f1f; /* Dark scrollbar track background */
+  }
+  
+  .member-details-container::-webkit-scrollbar-thumb {
+    background: #4a4a4a; /* Dark scrollbar thumb */
+    border-radius: 4px;
+  }
+  
+  .member-details-container::-webkit-scrollbar-thumb:hover {
+    background: #6b6b6b; /* Lighter scrollbar thumb on hover */
+  }
+  
