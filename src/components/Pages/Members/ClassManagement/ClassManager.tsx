@@ -118,10 +118,9 @@ const ClassManagement = () => {
       message.error('Failed to delete class.');
     }
   };
-
-  // Render list of classes in a table
   const renderClassList = () => (
     <Table
+      style={{width: '100%', margin: '20px auto'}}
       columns={[
         { title: 'Class Name', dataIndex: 'name', key: 'name' },
         { title: 'Instructor', dataIndex: 'instructor', key: 'instructor' },
@@ -135,6 +134,24 @@ const ClassManagement = () => {
         )}
       ]}
       dataSource={classes}
+    />
+  );
+  // Render list of classes in a table
+  const renderClassListFiltered = () => (
+    <Table
+      columns={[
+        { title: 'Class Name', dataIndex: 'name', key: 'name' },
+        { title: 'Instructor', dataIndex: 'instructor', key: 'instructor' },
+        { title: 'Capacity', dataIndex: 'capacity', key: 'capacity' },
+        {title: 'Date', dataIndex: 'date', key: 'date', render: (date) => dayjs(date).format('YYYY-MM-DD')},
+        { title: 'Actions', key: 'actions', render: (_, classItem) => (
+            <>
+              <Button onClick={() => handleClassClick(classItem)}>View / Edit</Button>
+              <Button onClick={() => removeClass(classItem)}>Delete</Button>
+            </>
+        )}
+      ]}
+      dataSource={filteredClasses}
     />
   );
   const customHeaderRender = ({ value, onChange, type, onTypeChange }: any) => {
@@ -163,13 +180,14 @@ const ClassManagement = () => {
       <h2>Class Management</h2>
       <Calendar onSelect={handleSelectDate} cellRender={dateCellRender} headerRender={customHeaderRender} mode='month' />
       <Button onClick={handleCreateClass}>Create New Class</Button>
+      <h2>All Classes</h2>
       {renderClassList()}
 
       <Modal open={isModalVisible} onCancel={() => setIsModalVisible(false)} footer={null} width={780}>
         <h3>Classes on {selectedDate}</h3>
-        <Button onClick={handleCreateClass} type="primary" style={{ marginBottom: '10px' }}>Create New Class</Button>
+        <Button onClick={handleCreateClass}  style={{ marginBottom: '10px' }}>Create New Class</Button>
         {filteredClasses.length > 0 ? (
-          renderClassList()
+          (renderClassListFiltered())
         ) : (
           <p>No classes scheduled for this date.</p>
         )}
@@ -203,7 +221,7 @@ const ClassManagement = () => {
             </Select>
           </Form.Item>
 
-          <Button type="primary" htmlType="submit">
+          <Button  htmlType="submit">
             {selectedClass ? 'Update Class' : 'Create Class'}
           </Button>
         </Form>

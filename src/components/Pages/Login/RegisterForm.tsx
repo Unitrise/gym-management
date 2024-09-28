@@ -42,7 +42,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onRegisterSuccess }) => {
           <Input placeholder="admin or staff" />
         </Form.Item>
         <Form.Item>
-          <Button type="primary" htmlType="submit">
+          <Button htmlType="submit">
             Register
           </Button>
         </Form.Item>

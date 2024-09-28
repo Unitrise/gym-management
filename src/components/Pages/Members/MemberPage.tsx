@@ -71,6 +71,12 @@ const MembersPage = () => {
       render: (status: any) => <Badge status={status === 'Inactive' ? 'error' : 'success'} text={status} />,
     },
     {
+      title: 'Membership Type',
+      dataIndex: 'membership',
+      key: 'membership',
+      render: (membership: any) => <span>{membership.type}</span>,
+    },
+    {
       title: 'Loyalty Points',
       dataIndex: 'loyalty',
       key: 'loyalty',

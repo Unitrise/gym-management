@@ -100,7 +100,7 @@ const AddMemberForm: React.FC = () => {
         </Form.Item>
       </Form>
         </div>
-        <Button type="primary" htmlType="submit" onClick={() => form.submit()}>
+        <Button htmlType="submit" onClick={() => form.submit()}>
         Add Member
       </Button>
     </Card>

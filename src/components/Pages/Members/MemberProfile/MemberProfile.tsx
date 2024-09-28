@@ -131,7 +131,7 @@ const MemberProfile: React.FC<MemberProfileProps> = ({ member, onClose }) => {
                         <Form.Item label="Membership Status" name={['membership', 'status']}>
                             <Input />
                         </Form.Item>
-                        <Button type="primary" htmlType="submit">
+                        <Button  htmlType="submit">
                             Save
                         </Button>
                     </Form>

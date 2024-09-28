@@ -44,13 +44,26 @@ html, body {
   overflow: auto; /* Handles any overflow content */
 }
 
+.ant-layout-sider-children{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 14rem ;
+}
+
 /* Ant Design Overrides for Dark Theme */
 .ant-layout {
   background-color: #1f1f1f;
   height: 100%;
 
 }
-
+.ant-empty-description{
+  color: #ffffff !important ;
+}
+.ant-empty-image{
+  fill: #ffffff !important ;
+  filter: invert(1);
+}
 .ant-layout-header {
   background-color: #141414;
   color: #ffffff;
@@ -59,6 +72,10 @@ html, body {
   display: flex;
   align-items: center;
   padding: 0 24px;
+}
+
+.ant-statistic-title{
+  color: #ffffff !important;
 }
 
 .ant-layout-sider {
@@ -100,7 +117,7 @@ button:hover, .ant-btn:hover {
   background-color: #1f1f1f;
   color: #ffffff;
   border-radius: 6px;
-  border: 1px solid #434343;
+  /* border: 1px solid #434343; */
 }
 
 .ant-input::placeholder,
@@ -181,6 +198,7 @@ button:hover, .ant-btn:hover {
 :where(.css-dev-only-do-not-override-43cu26).ant-menu-dark, :where(.css-dev-only-do-not-override-43cu26).ant-menu-dark>.ant-menu {
   color: rgba(255, 255, 255, 0.65);
   background: #1f1f1f;
+  margin-top: 60px;
 }
 .flex-container {
   display: flex;

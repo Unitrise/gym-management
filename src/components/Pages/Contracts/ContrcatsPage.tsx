@@ -32,7 +32,7 @@ const ContractsPage: React.FC = () => {
       title: 'Action',
       key: 'action',
       render: (text: any, record: any) => (
-        <Button type="link">Edit</Button>
+        <Button>Edit</Button>
       ),
     },
   ];

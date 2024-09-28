@@ -51,7 +51,7 @@ const LoginPage: React.FC = () => {
           <Input.Password />
         </Form.Item>
         <Form.Item>
-          <Button type="primary" htmlType="submit">
+          <Button  htmlType="submit">
             Login
           </Button>
         </Form.Item>
