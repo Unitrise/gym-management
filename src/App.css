@@ -73,17 +73,32 @@ html, body {
   align-items: center;
   padding: 0 24px;
 }
-
-.ant-statistic-title{
-  color: #ffffff !important;
+h2 {
+  color: #dcebf9;
 }
-
+.ant-statistic-title{
+  color: #bddfff !important;
+}
+.ant-modal{
+  width: 65vw !important;
+  height: 55vh;
+  
+}
 .ant-layout-sider {
   background-color: #1f1f1f;
 }
-
+.ant-form-item-control-input-content{
+  color: #2d2d2d !important;
+}
+.ant-input.css-dev-only-do-not-override-43cu26.ant-input-outlined.ant-input-status-success{
+  color: #2d2d2d !important;
+}
 .ant-menu-dark .ant-menu-item {
   color: #ffffff;
+}
+
+.ant-list-item-meta-description{
+  color: #ffffff !important;
 }
 
 .ant-menu-dark .ant-menu-item-selected {
@@ -209,6 +224,11 @@ button:hover, .ant-btn:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px; /* Spacing between grid items */
+}
+.ant-card-body{
+  background-color: #1f1f1f;
+  color: #ffffff;
+  border-color: #dcebf9 !important;
 }
 
 .component {
